@@ -40,4 +40,14 @@ describe('User Age', function() {
     let jupiterAge = parseInt((userAgeInDays / (11.8 * 365)).toFixed(0));
     expect(jupiterAge).toEqual(2);
   });
+
+  it('should calculate the amount of years left to live on a specific planet', function () {
+    let femaleLifeExpectancy = 81 * 365;
+    let maleLifeExpectancy = 76 * 365;
+    let userAge = new UserAge(28);
+    let userAgeInDays = userAge.age * 365;
+    let testLifeExpectancy = maleLifeExpectancy - userAgeInDays;
+    let mercuryLifeExpectancy = parseInt((testLifeExpectancy / 88).toFixed(0));
+    expect(mercuryLifeExpectancy).toEqual(199);
+  });
 });
