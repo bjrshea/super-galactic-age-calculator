@@ -1,8 +1,10 @@
-import { INSERT } from './../src/backend.js';
+import { UserAge } from './../src/backend.js';
 
-describe('Galactic Age', function() {
+describe('User Age', function() {
 
-  it('should calculate mercury age', function() {
-    expect((useAge / 88).toEqual(116)
+  it('should calculate user age', function() {
+    let userAge = new UserAge(28);
+    expect(userAge.age).toEqual(28);
   });
+
 });
