@@ -13,11 +13,11 @@ describe('User Age', function() {
     expect(userAgeInDays).toEqual(10220);
   });
 
-  it('should multiply user age by 365', function () {
+  it('should calculate user age in Mercury years', function () {
     let userAge = new UserAge(28);
     let userAgeInDays = userAge.age * 365;
     let mercuryAge = parseInt((userAgeInDays / 88).toFixed(0));
-    expect(mercuryAge).toEqual(117);
+    expect(mercuryAge).toEqual(116);
   });
 
 });
