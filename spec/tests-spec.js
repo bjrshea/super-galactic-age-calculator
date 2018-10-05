@@ -20,4 +20,24 @@ describe('User Age', function() {
     expect(mercuryAge).toEqual(116);
   });
 
+  it('should calculate user age in Venus years', function () {
+    let userAge = new UserAge(28);
+    let userAgeInDays = userAge.age * 365;
+    let venusAge = parseInt((userAgeInDays / 225).toFixed(0));
+    expect(venusAge).toEqual(45);
+  });
+
+  it('should calculate user age in Mars years', function () {
+    let userAge = new UserAge(28);
+    let userAgeInDays = userAge.age * 365;
+    let marsAge = parseInt((userAgeInDays / 687).toFixed(0));
+    expect(marsAge).toEqual(15);
+  });
+
+  it('should calculate user age in Jupiter years', function () {
+    let userAge = new UserAge(28);
+    let userAgeInDays = userAge.age * 365;
+    let jupiterAge = parseInt((userAgeInDays / (11.8 * 365)).toFixed(0));
+    expect(jupiterAge).toEqual(2);
+  });
 });
