@@ -10,31 +10,61 @@ export function User(age, gender) {
   this.gender = gender;
 }
 
+function PlanetAge (mercury, venus, mars, jupiter) {
+  this.mercury = mercury;
+  this.venus = venus;
+  this.mars = mars;
+  this.jupiter = jupiter;
+}
+
+function MaleLifeExpectancy (mercury, venus, mars, jupiter) {
+  this.mercury = mercury;
+  this.venus = venus;
+  this.mars = mars;
+  this.jupiter = jupiter;
+}
+
+function FemaleLifeExpectancy (mercury, venus, mars, jupiter) {
+  this.mercury = mercury;
+  this.venus = venus;
+  this.mars = mars;
+  this.jupiter = jupiter;
+}
+
 // Frontend Logic:
 
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
+    // User info:
     let newUser = new User();
     newUser.age = parseInt($("#age-input").val());
     newUser.gender = $("input:radio[name=gender]:checked").val();
+    // User age per planet:
+    let newPlanetAge = new PlanetAge();
+    newPlanetAge.mercury = parseInt(((newUser.age * 365) / 88).toFixed(0));
+    newPlanetAge.venus = parseInt(((newUser.age * 365) / 225).toFixed(0));
+    newPlanetAge.mars = parseInt(((newUser.age * 365) / 687).toFixed(0));
+    newPlanetAge.jupiter = parseInt(((newUser.age * 365) / (11.8 * 365)).toFixed(0));
+    // User life expectancy:
+    let newFemale = new FemaleLifeExpectancy();
+    let newMale = new MaleLifeExpectancy();
+    const femaleEquation = (81 * 365) - (newUser.age * 365);
+    const maleEquation = (76 * 365) - (newUser.age * 365);
 
-    let mercuryAge = parseInt(((newUser.age * 365) / 88).toFixed(0));
-    let venusAge = parseInt(((newUser.age * 365) / 225).toFixed(0));
-    let marsAge = parseInt(((newUser.age * 365) / 687).toFixed(0));
-    let jupiterAge = parseInt(((newUser.age * 365) / (11.8 * 365)).toFixed(0));
+    newFemale.mercury = parseInt((femaleEquation / 88).toFixed(0));
+    newFemale.venus = parseInt((femaleEquation / 225).toFixed(0));
+    newFemale.mars = parseInt((femaleEquation / 687).toFixed(0));
+    newFemale.jupiter = parseInt((femaleEquation / (11.8 * 365)).toFixed(0));
 
-    let femaleLifeExpectancy = (81 * 365) - (newUser.age * 365);
-    let maleLifeExpectancy = (76 * 365) - (newUser.age * 365);
+    newMale.mercury = parseInt((maleEquation / 88).toFixed(0));
+    newMale.venus = parseInt((maleEquation / 225).toFixed(0));
+    newMale.mars = parseInt((maleEquation / 687).toFixed(0));
+    newMale.jupiter = parseInt((maleEquation / (11.8 * 365)).toFixed(0));
 
-    let maleMercury = parseInt((maleLifeExpectancy / 88).toFixed(0));
-    let maleVenus = parseInt((maleLifeExpectancy / 225).toFixed(0));
-    let maleMars = parseInt((maleLifeExpectancy / 687).toFixed(0));
-    let maleJupiter = parseInt((maleLifeExpectancy / (11.8 * 365)).toFixed(0));
-
-    let femaleMercury = parseInt((femaleLifeExpectancy / 88).toFixed(0));
-    let femaleVenus = parseInt((femaleLifeExpectancy / 225).toFixed(0));
-    let femaleMars = parseInt((femaleLifeExpectancy / 687).toFixed(0));
-    let femaleJupiter = parseInt((femaleLifeExpectancy / (11.8 * 365)).toFixed(0));
+    console.log(newUser);
+    console.log(newPlanetAge);
+    console.log(newFemale);
+    console.log(newMale);
   });
 });
