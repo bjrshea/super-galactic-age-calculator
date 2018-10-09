@@ -6,6 +6,15 @@
 
 An extraterrestrial web app that calculates a user's age based on another planet's solar years. And guess what? I'm about 118 years old on Mercury.
 
+## Install Instructions
+
+In your command line, do the following:
+
+* `git clone https://github.com/bjrshea/super-galactic-age-calculator.git`
+* `npm install`
+* `npm run build`
+* `npm run start`
+
 ## Technologies & Dependencies Used
 
 * JavaScript
