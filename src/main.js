@@ -3,36 +3,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-// Backend Logic:
-
-export function User(age, gender) {
-  this.age = age;
-  this.gender = gender;
-}
-
-function PlanetAge (mercury, venus, mars, jupiter) {
-  this.mercury = mercury;
-  this.venus = venus;
-  this.mars = mars;
-  this.jupiter = jupiter;
-}
-
-function MaleLifeExpectancy (mercury, venus, mars, jupiter) {
-  this.mercury = mercury;
-  this.venus = venus;
-  this.mars = mars;
-  this.jupiter = jupiter;
-}
-
-function FemaleLifeExpectancy (mercury, venus, mars, jupiter) {
-  this.mercury = mercury;
-  this.venus = venus;
-  this.mars = mars;
-  this.jupiter = jupiter;
-}
-
-// Frontend Logic:
-
 $(document).ready(function() {
   $("#form").submit(function(event) {
     event.preventDefault();
