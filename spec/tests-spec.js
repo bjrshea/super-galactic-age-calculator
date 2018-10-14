@@ -1,4 +1,4 @@
-import { User } from './../src/backend.js';
+import UserInfo from './../src/UserInfo.js';
 
 let userAge = new User(28);
 let userAgeInDays = userAge.age * 365;
