@@ -26,19 +26,18 @@ describe('UserInfo', function() {
     expect(newUserInfo.jupiter).toEqual(2);
   });
 
-  it('should calculate remaining life expectancy for a male', function () {
+  it('should calculate remaining life expectancy on Earth for a male', function () {
     expect(newUserInfo.maleExpectancy).toEqual(48);
   });
 
-  it('should calculate remaining life expectancy for a female', function () {
+  it('should calculate remaining life expectancy on Earth for a female', function () {
     expect(newUserInfo.femaleExpectancy).toEqual(53);
   });
 
-  // it('should calculate the amount of years left to live on a specific planet', function () {
-  //   let femaleLifeExpectancy = 81 * 365;
-  //   let maleLifeExpectancy = 76 * 365;
-  //   let testLifeExpectancy = maleLifeExpectancy - newUserInfoInDays;
-  //   let mercuryLifeExpectancy = parseInt((testLifeExpectancy / 88).toFixed(0));
-  //   expect(mercuryLifeExpectancy).toEqual(199);
-  // });
+  it('should calculate remaining life expectancy on all planets for a male', function () {
+    expect(newUserInfo.maleMercury).toEqual(200);
+    expect(newUserInfo.maleVenus).toEqual(77);
+    expect(newUserInfo.maleMars).toEqual(26);
+    expect(newUserInfo.maleJupiter).toEqual(4);
+  });
 });
