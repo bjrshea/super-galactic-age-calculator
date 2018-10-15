@@ -40,4 +40,11 @@ describe('UserInfo', function() {
     expect(newUserInfo.maleMars).toEqual(26);
     expect(newUserInfo.maleJupiter).toEqual(4);
   });
+
+  it('should calculate remaining life expectancy on all planets for a female', function () {
+    expect(newUserInfo.femaleMercury).toEqual(221);
+    expect(newUserInfo.femaleVenus).toEqual(85);
+    expect(newUserInfo.femaleMars).toEqual(28);
+    expect(newUserInfo.femaleJupiter).toEqual(4);
+  });
 });
