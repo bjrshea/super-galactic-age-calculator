@@ -45,4 +45,4 @@ The Super Galactic Age calculator has the ability to tell you your age on Mercur
 | User would like their age calculated in Mars years. | 21 | 11 |
 | User would like their age calculated in Jupiter years. | 21 | 2 |
 | A male would like their life expectancy on Mercury. | 28 | 200 |
-| A female would like their life expectancy on Mercury. | 21 | 221 |
+| A female would like their life expectancy on Mercury. | 28 | 221 |
