@@ -4,7 +4,7 @@
 
 ## Description
 
-An extraterrestrial web app that calculates a user's age based on another planet's solar years. And guess what? I'm about 118 years old on Mercury.
+An extraterrestrial web app that calculates a user's age based on another planet's solar years. And guess what? I'm about 117 years old on Mercury.
 
 ## Install Instructions
 
@@ -14,6 +14,13 @@ In your command line, do the following:
 * `npm install`
 * `npm run build`
 * `npm run start`
+
+## Contribution Requirements
+
+1. Clone the repo
+1. Make a new branch
+1. Commit and push your changes
+1. Create a PR
 
 ## Technologies & Dependencies Used
 
@@ -27,30 +34,15 @@ In your command line, do the following:
 * Jasmine
 * Karma
 
-## Specs needed to be accomplished in order
+## Specs
 
-User would like their age calculated in Mercury years.
+The Super Galactic Age calculator has the ability to tell you your age on Mercury, Venus, Mars, and Jupiter. Also, you're able to see your remaining life expectancy on each of those planets by stating whether you're male or female.
 
-**Age Input:** 28
-**Age Output:** 116
-
-User would like their age calculated in Venus years.
-
-**Age Input:** 28
-**Age Output:** 45
-
-User would like their age calculated in Mars years.
-
-**Age Input:** 28
-**Age Output:** 15
-
-User would like their age calculated in Jupiter years.
-
-**Age Input:** 28
-**Age Output:** 2
-
-Determine user's life expectancy.
-
-**Age Input:** 28
-**Male or Female:** Male
-**Life Expectancy on Mercury:** 199
+| Behavior | Input | Output |
+|----------|-------|--------|
+| User would like their age calculated in Mercury years. | 28 | 117 |
+| User would like their age calculated in Venus years. | 32 | 52 |
+| User would like their age calculated in Mars years. | 21 | 11 |
+| User would like their age calculated in Jupiter years. | 21 | 2 |
+| A male would like their life expectancy on Mercury. | 28 | 200 |
+| A female would like their life expectancy on Mercury. | 21 | 221 |
