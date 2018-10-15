@@ -1,26 +1,24 @@
 export default class UserInfo {
-  
+
   constructor(age, gender) {
     this.age = age;
     this.gender = gender;
-    this.mercury = parseInt(((this.age * 365) / 88).toFixed(0));
-    this.venus = parseInt(((this.age * 365) / 225).toFixed(0));
-    this.mars = parseInt(((this.age * 365) / 687).toFixed(0));
-    this.jupiter = parseInt(((this.age * 365) / (11.8 * 365)).toFixed(0));
+    this.mercury = parseInt((this.age / .24).toFixed(0));
+    this.venus = parseInt((this.age / .62).toFixed(0));
+    this.mars = parseInt((this.age / 1.88).toFixed(0));
+    this.jupiter = parseInt((this.age / 11.86).toFixed(0));
   }
 
-  // function PlanetAge (mercury, venus, mars, jupiter) {
-  //   this.mercury = mercury;
-  //   this.venus = venus;
-  //   this.mars = mars;
-  //   this.jupiter = jupiter;
+  // maleLifeExpectancy(planetAge) {
+  //   planetAge
   // }
   //
-  // function MaleLifeExpectancy (mercury, venus, mars, jupiter) {
-  //   this.mercury = mercury;
-  //   this.venus = venus;
-  //   this.mars = mars;
-  //   this.jupiter = jupiter;
+  // demographic() {
+  //   if (this.gender == 'male') {
+  //     return maleLifeExpectancy();
+  //   } else {
+  //     return 'N/A'
+  //   }
   // }
   //
   // function FemaleLifeExpectancy (mercury, venus, mars, jupiter) {
