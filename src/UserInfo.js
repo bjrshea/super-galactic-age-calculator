@@ -7,10 +7,12 @@ export default class UserInfo {
     this.venus = parseInt((this.age / .62).toFixed(0));
     this.mars = parseInt((this.age / 1.88).toFixed(0));
     this.jupiter = parseInt((this.age / 11.86).toFixed(0));
+    this.maleExpectancy = 76 - this.age;
+    this.femaleExpectancy = 81 - this.age;
   }
 
-  // maleLifeExpectancy(planetAge) {
-  //   planetAge
+  // maleLifeExpectancy(age) {
+  //   age
   // }
   //
   // demographic() {
